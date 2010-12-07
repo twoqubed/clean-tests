@@ -27,9 +27,19 @@
 
     <dependencies>
 
-        <!-- ================== -->
-        <!-- Test dependencies. -->
-        <!-- ================== -->
+        <!-- ==================== -->
+        <!-- Compile dependencies -->
+        <!-- ==================== -->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.0.3.RELEASE</version>
+        </dependency>
+
+        <!-- ================= -->
+        <!-- Test dependencies -->
+        <!-- ================= -->
 
         <dependency>
             <groupId>junit</groupId>
