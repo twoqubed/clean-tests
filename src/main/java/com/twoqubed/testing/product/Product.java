@@ -63,4 +63,8 @@ public class Product {
     public String getInactiveReason() {
         return inactiveReason;
     }
+
+    public boolean isInactive() {
+        return inactiveDate != null;
+    }
 }
