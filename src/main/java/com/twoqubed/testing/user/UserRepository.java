@@ -1,4 +1,4 @@
-package com.twoqbued.testing.user;
+package com.twoqubed.testing.user;
 
 public interface UserRepository {
 

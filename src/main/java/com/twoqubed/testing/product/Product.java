@@ -1,4 +1,4 @@
-package com.twoqbued.testing.product;
+package com.twoqubed.testing.product;
 
 import java.math.BigDecimal;
 import java.util.Date;

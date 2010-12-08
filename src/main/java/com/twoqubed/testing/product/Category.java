@@ -1,4 +1,4 @@
-package com.twoqbued.testing.product;
+package com.twoqubed.testing.product;
 
 public class Category {
 
