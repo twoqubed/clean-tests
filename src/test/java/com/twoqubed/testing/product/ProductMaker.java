@@ -32,7 +32,7 @@ public class ProductMaker {
                 null,
                 null,
                 lookup.valueOf(inactiveDate, (Date) null),
-                lookup.valueOf(inactiveReason, null));
+                lookup.valueOf(inactiveReason, (String) null));
         }
     };
 

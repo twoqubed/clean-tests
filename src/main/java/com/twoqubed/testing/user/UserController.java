@@ -10,14 +10,37 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+    private UserRepository repository;
 
-    @RequestMapping(method = POST)
-    public ModelAndView updateUser(@RequestParam User user) {
-        return null;
+    public UserController(UserRepository repository) {
+        this.repository = repository;
     }
 
     @RequestMapping(method = GET)
     public ModelAndView findUser(@RequestParam String userId) {
-        return null;
+        try {
+            User user = repository.findUser(userId);
+            return new ModelAndView("user", "user", user);
+        }
+        catch (UserNotFoundException e) {
+            return new ModelAndView("error");
+        }
+    }
+
+    @RequestMapping(method = POST)
+    public ModelAndView updateUser(@RequestParam User user) {
+        repository.updateUser(user);
+
+        if (user == null) {
+            return new ModelAndView("error");
+        }
+
+        try {
+            repository.updateUser(user);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("userSaved");
     }
 }
